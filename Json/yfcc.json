@@ -1,0 +1,12 @@
+{
+  "dataset": "yfcc",
+  "train": "./yfcc_test_feats_1.h5",
+  "train_label": "./yfcc_test_labels_1.mat",
+  "test": "./yfcc_test_feats_2.h5",
+  "test_label": "./yfcc_test_labels_2.mat",
+  "query": "./query1000_feats.h5",
+  "query_label": "./query1000_labels.mat",
+  "num_class": 80,
+  "hidden_size": 4096,
+  "max_frames": 25
+}
