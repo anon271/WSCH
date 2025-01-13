@@ -1,5 +1,5 @@
 # WSCH: Wide-Shallow Autoencoder for Self-Supervised Video Hashing with Cyclic Multi-Task Learning
 
-![](figures/model.jpg)
+![](figures/model.png)
 
-![](figures/train.jpg)
+![](figures/train.png)
