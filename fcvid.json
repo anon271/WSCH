@@ -1,0 +1,12 @@
+{
+  "dataset": "fcv",
+  "train": "/mnt/add_disk/sunzhe/fcv_train_feats.h5",
+  "train_label": "/mnt/add_disk/sunzhe/fcv_train_labels.mat",
+  "test": "/mnt/add_disk/sunzhe/fcv_test_feats.h5",
+  "test_label": "/mnt/add_disk/sunzhe/fcv_test_labels.mat",
+  "query": "/mnt/add_disk/sunzhe/fcv_test_feats.h5",
+  "query_label": "/mnt/add_disk/sunzhe/fcv_test_labels.mat",
+  "num_class": 239,
+  "hidden_size": 4096,
+  "max_frames": 25
+}

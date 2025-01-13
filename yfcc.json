@@ -1,0 +1,12 @@
+{
+  "dataset": "fcv",
+  "train": "/mnt/add_disk/sunzhe/yfcc/yfcc_test_feats_1.h5",
+  "train_label": "/mnt/add_disk/sunzhe/yfcc/yfcc_test_labels_1.mat",
+  "test": "/mnt/add_disk/sunzhe/yfcc/yfcc_test_feats_2.h5",
+  "test_label": "/mnt/add_disk/sunzhe/yfcc/yfcc_test_labels_2.mat",
+  "query": "/mnt/add_disk/sunzhe/yfcc/query1000_feats.h5",
+  "query_label": "/mnt/add_disk/sunzhe/yfcc/query1000_labels.mat",
+  "num_class": 80,
+  "hidden_size": 4096,
+  "max_frames": 25
+}
