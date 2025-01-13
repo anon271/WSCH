@@ -52,8 +52,7 @@ To test WSCH:
 
 ## Trained Models
 
-We provide trained WSMH checkpoints. You can download them from Baiduyun disk: 
- [Baidu disk]([https://pan.baidu.com/s/1qdCe6eZQR6ijhen_MbDbUg?pwd=mfok]) 
+We provide trained WSMH checkpoints. You can download them from Baiduyun disk: [Baidu disk](https://pan.baidu.com/s/1qdCe6eZQR6ijhen_MbDbUg?pwd=mfok#list/path=%2F) 
 
 ## Results
 
