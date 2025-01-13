@@ -88,7 +88,7 @@ python run.py
 
 ## Trained Models
 
-Pre-trained WSMH checkpoints are available for download from [Baidu disk](https://pan.baidu.com/s/1qdCe6eZQR6ijhen_MbDbUg?pwd=mfok#list/path=%2F)
+Trained WSMH checkpoints are available for download from: [Baidu disk](https://pan.baidu.com/s/1qdCe6eZQR6ijhen_MbDbUg?pwd=mfok#list/path=%2F) .
 
 ## Results
 
