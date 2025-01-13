@@ -13,16 +13,15 @@
 * [5. Results](#Results)
 
 
-```markdown
-# Getting Started
+## Getting Started
 
-## 1. Clone Repository
+### 1. Clone Repository
 ```bash
 git clone https://github.com/anon271/WSCH
 cd WSCH
 ```
 
-## 2. Environment Setup
+### 2. Environment Setup
 ```bash
 conda create -n conmh python=3.10.13
 conda activate wsch
@@ -30,7 +29,7 @@ conda install pytorch==2.1.1 pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install -r requirements.txt
 ```
 
-## 3. Download Datasets
+### 3. Download Datasets
 VGG features of FCVID and YFCC are kindly provided by the authors of [SSVH]. ResNet50 features of ActivityNet are provided by the authors of [BTH]. You can download these datasets from Baidu disk:
 
 | Dataset | Link |
@@ -39,15 +38,15 @@ VGG features of FCVID and YFCC are kindly provided by the authors of [SSVH]. Res
 | ActivityNet | [Baidu disk](https://pan.baidu.com/s/1cDJ0-6T2-AOeLgp5rBihfA?pwd=0000) |
 | YFCC | [Baidu disk](https://pan.baidu.com/s/1jpqcRRFdiemGvlPpukxJ6Q?pwd=0000) |
 
-## 4. Configure Dataset Paths
+### 4. Configure Dataset Paths
 Modify the dataset paths in the corresponding JSON files:
 - ./Json/Anet.json
 - ./Json/fcvid.json
 - ./Json/yfcc.json
 
-# Training
+## Training
 
-## Training WSCH:
+### Training WSCH:
 
 1. Modify parameters in `run.py`:
    - `data_set_config`: Path to dataset JSON file
@@ -74,9 +73,9 @@ python run.py
 python run.py
 ```
 
-# Testing
+## Testing
 
-## Testing WSCH:
+### Testing WSCH:
 
 1. Modify `run.py`:
    - Change `from train import train_model` to `from test import train_model`
@@ -87,10 +86,9 @@ python run.py
 python run.py
 ```
 
-# Trained Models
+## Trained Models
 
 Pre-trained WSMH checkpoints are available for download from [Baidu disk](https://pan.baidu.com/s/1qdCe6eZQR6ijhen_MbDbUg?pwd=mfok#list/path=%2F)
-```
 
 ## Results
 
@@ -107,7 +105,6 @@ For this repository, the expected performance is:
 | YFCC | 32 | 0.176 | 0.103 | 0.086 | 0.079 | 0.076 | 0.073 | 
 | YFCC | 64 | 0.187 | 0.108 | 0.090 | 0.083 | 0.080 | 0.077 |
 | YFCC | 128 | 0.192 | 0.111 | 0.093 | 0.086 | 0.081 | 0.079 | 
-
 
 
 [SSVH]:https://github.com/lixiangpengcs/Self-Supervised-Video-Hashing
