@@ -1,0 +1,12 @@
+{
+  "dataset": "activitynet",
+  "train": "./train_feats.h5",
+  "train_label": "",
+  "test": "./test_feats.h5",
+  "test_label": "./re_label.mat",
+  "query": "./query_feats.h5",
+  "query_label": "./q_label.mat",
+  "num_class": 200,
+  "hidden_size": 2048,
+  "max_frames": 30
+}
