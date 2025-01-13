@@ -1,0 +1,12 @@
+{
+  "dataset": "fcv",
+  "train": "./fcv_train_feats.h5",
+  "train_label": "./fcv_train_labels.mat",
+  "test": "./fcv_test_feats.h5",
+  "test_label": "./fcv_test_labels.mat",
+  "query": "./fcv_test_feats.h5",
+  "query_label": "./fcv_test_labels.mat",
+  "num_class": 239,
+  "hidden_size": 4096,
+  "max_frames": 25
+}
