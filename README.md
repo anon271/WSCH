@@ -40,9 +40,9 @@ VGG features of FCVID and YFCC are kindly provided by the authors of [SSVH]. Res
 
 ### 4. Configure Dataset Paths
 Modify the dataset paths in the corresponding JSON files:
-- ./Json/Anet.json
-- ./Json/fcvid.json
-- ./Json/yfcc.json
+- Json/Anet.json
+- Json/fcvid.json
+- Json/yfcc.json
 
 ## Training
 
