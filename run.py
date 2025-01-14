@@ -7,8 +7,8 @@ import torch
 from dataset import load_data, load_test_data     # 修改
 from pretrain import train_model        # 修改
 
-result_log_dir = '.'
-result_weight_dir = '.'
+result_log_dir = './log'
+result_weight_dir = './weight'
 
 def getfileindex():
     try:
