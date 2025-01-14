@@ -120,7 +120,7 @@ class WSCH(nn.Module):
             dim=2
         )
     
-        similarity = similarity / self.cfg.tau_clus
+        similarity = similarity / self.cfg.clus_temperature
         pos_idx = similarity.argmax(dim=1)
         cluster_loss = F.cross_entropy(similarity, pos_idx)
 
