@@ -147,7 +147,7 @@ class Encoder(nn.Module):
                               groups=self.hidden_size,
                               padding=self.d_conv - 1)
 
-        self.ssd = SSD(hidden_size*2)
+        self.ssm = SSD(hidden_size*2)
         self.out_proj = nn.Linear(self.hidden_size * self.expand_f, self.hidden_size, bias=True)
 
 
@@ -172,7 +172,7 @@ class Encoder(nn.Module):
         _, L, _ = x.shape
         x = self.conv(x.transpose(1, 2))[:,:,:L].transpose(1, 2)
 
-        x = self.ssd(x)
+        x = self.ssm(x)
         
         z = F.silu(z)
 
