@@ -20,10 +20,10 @@ def getfileindex():
     return fileindex+1
 
 class Cfg:
-    def __init__(self, a, b, tau_clus, n_clusters, temperature, tau_plus, p1, p2):
+    def __init__(self, a, b, clus_temperature, n_clusters, temperature, tau_plus, p1, p2):
         self.a = a
         self.b = b
-        self.tau_clus = tau_clus
+        self.clus_temperature = clus_temperature
         self.n_clusters = n_clusters
         self.temperature = temperature
         self.tau_plus = tau_plus
