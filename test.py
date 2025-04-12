@@ -101,7 +101,7 @@ def train_model(
     # Create label
     if data_config['dataset'] == 'activitynet':
         labels = sio.loadmat(data_config['test_label'])['re_label']
-        labels = np.concatenate((labels, sio.loadmat(data_config['query_label'])['q_label']), axis=0)
+        q_labels = sio.loadmat(data_config['query_label'])['q_label']
     else:
         labels = sio.loadmat(data_config['test_label'])['labels']
 
@@ -111,13 +111,24 @@ def train_model(
 
     with torch.no_grad():
         hashcode = generate_code(model, test_loader, hashembeding_dim, use_device)
-
-        map = mAP(
-            hashcode.to(use_device),
-            labels.to(use_device),
-            use_device,
-            [5, 20, 40, 60, 80, 100]
-        )
+        if data_config['dataset'] == 'activitynet':
+            r_hashcode = hashcode[0:len(labels),:]
+            q_hashcode = hashcode[len(labels):,:]
+            map = mAP(
+                r_hashcode.to(use_device),
+                labels.to(use_device),
+                use_device,
+                [5, 20, 40, 60, 80, 100]
+                q_hashcode.to(use_device),
+                q_labels.to(use_device)
+            )
+        else:
+            map = mAP(
+                hashcode.to(use_device),
+                labels.to(use_device),
+                use_device,
+                [5, 20, 40, 60, 80, 100]
+            )
         print(map)
 
 
@@ -148,11 +159,14 @@ def generate_code(model, dataloader, code_length, device):
 
 
 
-def mAP(hashcode, labels, device, k):
+def mAP(hashcode, labels, device, k, q_hashcode=None, q_labels=None):
 
     nbits = hashcode.shape[1]
-
-    IX = -torch.mm(hashcode, hashcode.t())
+    if (q_hashcode==None)
+        q_hashcode=hashcode
+    if (q_labels==None)
+        q_labels = labels
+    IX = -torch.mm(hashcode, q_hashcode.t())
     del hashcode
     IX = IX + nbits
     IX = IX * 0.5
@@ -169,7 +183,7 @@ def mAP(hashcode, labels, device, k):
         retrieved_labels = labels[IX[:i]]
         retrieved_labels = retrieved_labels.permute(1, 0, 2)
     
-        relevance = torch.sum(retrieved_labels * labels.unsqueeze(1), dim=2)
+        relevance = torch.sum(retrieved_labels * q_labels.unsqueeze(1), dim=2)
         relevance = torch.clamp(relevance, max=1)
 
         cumsum_relevance = torch.cumsum(relevance, dim=1) * relevance
